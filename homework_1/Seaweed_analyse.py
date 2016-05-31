@@ -223,8 +223,12 @@ for item in name_value:
     ax.axvline(data_filtrated[item].mean(), color = 'b')
     i += 1
 plt.subplots_adjust(wspace = 0.3, hspace = 0.3)
-fig.savefig('./image/filted_missing_data1.jpg')
-print 'filted_missing_data1 saved at ./image/filted_missing_data1.jpg'
+
+# 保存图像和处理后数据
+fig.savefig('./image/missing_data_delete.jpg')
+data_filtrated.to_csv('./data_output/missing_data_delete.csv', mode = 'w', encoding='utf-8', index = False,header = False)
+print 'filted_missing_data1 saved at ./image/missing_data_delete.jpg'
+print 'data after analysis saved at ./data_output/missing_data_delete.csv'
 
 
 # 4.2 用最高频率值来填补缺失值
@@ -266,8 +270,12 @@ for item in name_value:
     ax.axvline(data_filtrated[item].mean(), color = 'b')
     i += 1
 plt.subplots_adjust(wspace = 0.3, hspace = 0.3)
-fig.savefig('./image/filted_missing_data2.jpg')
-print 'filted_missing_data2 saved at ./image/filted_missing_data2.jpg'
+
+# 保存图像和处理后数据
+fig.savefig('./image/missing_data_most.jpg')
+data_filtrated.to_csv('./data_output/missing_data_most.csv', mode = 'w', encoding='utf-8', index = False,header = False)
+print 'filted_missing_data2 saved at ./image/missing_data_most.jpg'
+print 'data after analysis saved at ./data_output/missing_data_most.csv'
 
 
 # 4.3 通过属性的相关关系来填补缺失值
@@ -306,8 +314,12 @@ for item in name_value:
     ax.axvline(data_filtrated[item].mean(), color = 'b')
     i += 1
 plt.subplots_adjust(wspace = 0.3, hspace = 0.3)
-fig.savefig('./image/filted_missing_data3.jpg')
-print 'filted_missing_data3 saved at ./image/filted_missing_data3.jpg'
+
+# 保存图像和处理后数据
+fig.savefig('./image/missing_data_corelation.jpg')
+data_filtrated.to_csv('./data_output/missing_data_corelation.csv', mode = 'w', encoding='utf-8', index = False,header = False)
+print 'filted_missing_data3 saved at ./image/missing_data_corelation.jpg'
+print 'data after analysis saved at ./data_output/missing_data_corelation.csv'
 
 
 # 4.4 通过数据对象之间的相似性来填补缺失值
@@ -379,11 +391,10 @@ for item in name_value:
     ax.axvline(data_filtrated[item].mean(), color = 'b')
     i += 1
 plt.subplots_adjust(wspace = 0.3, hspace = 0.3)
-fig.savefig('./image/filted_missing_data4.jpg')
+
+# 保存图像和处理后数据
+fig.savefig('./image/missing_data_similarity.jpg')
+data_filtrated.to_csv('./data_output/missing_data_similarity.csv', mode = 'w', encoding='utf-8', index = False,header = False)
 print 'filted_missing_data4 saved at ./image/filted_missing_data4.jpg'
-
-
-# **Step 5.保存预处理后的数据集**
-data_filtrated.to_csv('./Analysis_filted.csv', mode = 'w', encoding='utf-8', index = False,header = False)
-print 'data after analysis saved at ./Analysis_filted.csv'
+print 'data after analysis saved at ./data_output/missing_data_similarity.csv'
 

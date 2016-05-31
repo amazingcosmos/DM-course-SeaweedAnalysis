@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Seaweed analyse</title>
+<title>Seaweed_analyse</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -224,7 +224,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
@@ -274,12 +274,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 转换文件格式，生成csv文件</span>
-<span class="n">fp_origin</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./Analysis.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">fp_modified</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./Analysis.csv&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">fp_origin</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./data_origin/Analysis.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">fp_modified</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./data_origin/Analysis.csv&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
 
 <span class="n">line</span> <span class="o">=</span> <span class="n">fp_origin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
 <span class="k">while</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
@@ -312,7 +312,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 定义两类数据：标称型和数值型</span>
@@ -322,7 +322,7 @@ div#notebook {
 <span class="n">name_seaweed</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a1&quot;</span><span class="p">,</span> <span class="s2">&quot;a2&quot;</span><span class="p">,</span> <span class="s2">&quot;a3&quot;</span><span class="p">,</span> <span class="s2">&quot;a4&quot;</span><span class="p">,</span> <span class="s2">&quot;a5&quot;</span><span class="p">,</span> <span class="s2">&quot;a6&quot;</span><span class="p">,</span> <span class="s2">&quot;a7&quot;</span><span class="p">]</span>
 
 <span class="c1"># 读取数据</span>
-<span class="n">data_origin</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./Analysis.csv&quot;</span><span class="p">,</span> 
+<span class="n">data_origin</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data_origin/Analysis.csv&quot;</span><span class="p">,</span> 
                    <span class="n">names</span> <span class="o">=</span> <span class="n">name_category</span><span class="o">+</span><span class="n">name_value</span><span class="p">,</span>
                    <span class="n">na_values</span> <span class="o">=</span> <span class="s2">&quot;XXXXXXX&quot;</span><span class="p">)</span>
 
@@ -342,7 +342,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -607,7 +607,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 使用value_counts函数统计每个标称属性的取值频数</span>
@@ -666,7 +666,7 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 最大值</span>
@@ -690,7 +690,7 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">data_show</span>
@@ -704,7 +704,7 @@ dtype: int64
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -883,7 +883,7 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 直方图</span>
@@ -894,6 +894,7 @@ dtype: int64
     <span class="n">data_origin</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="n">item</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">hspace</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./image/histogram.jpg&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1758,7 +1759,7 @@ SZIkSZKkibFzSpIkSZIkSRNj55QkSZIkSZIm5v8HhOpIKhBjSbsAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># qq图</span>
@@ -1770,6 +1771,7 @@ SZIkSZKkibFzSpIkSZIkSRNj55QkSZIkSZIm5v8HhOpIKhBjSbsAAAAASUVORK5CYII=
     <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">hspace</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./image/qqplot.jpg&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -3499,7 +3501,7 @@ iIhI0qnoJCIiIiIiIiIiSfd/S+N0OWVsgboAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 盒图</span>
@@ -3509,6 +3511,7 @@ iIhI0qnoJCIiIiIiIiIiSfd/S+N0OWVsgboAAAAASUVORK5CYII=
     <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
     <span class="n">data_origin</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;box&#39;</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./image/boxplot.jpg&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -4276,7 +4279,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 条件盒图</span>
@@ -4289,6 +4292,7 @@ AABJRU5ErkJggg==
         <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">seaweed</span><span class="p">)</span>
         <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">wspace</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./image/boxplot_condition.jpg&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -5804,7 +5808,7 @@ TERERCRDaoyJiIiIZEiNMREREZEM/X8JIgkPmC9CnwAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 找出含有缺失值的数据条目索引值</span>
@@ -5822,206 +5826,206 @@ TERERCRDaoyJiIiIZEiNMREREZEM/X8JIgkPmC9CnwAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[103]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
         <style  type="text/css" >
         
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col9 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row0_col9 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col4 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row1_col4 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col3 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row2_col3 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col5 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row3_col5 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col10 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row3_col10 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col5 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row4_col5 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col10 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row4_col10 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col5 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row5_col5 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col10 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row5_col10 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col5 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row6_col5 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col10 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row6_col10 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col5 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row7_col5 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col10 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row7_col10 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col5 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row8_col5 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col10 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row8_col10 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col5 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row9_col5 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col10 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row9_col10 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col4 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row10_col4 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col5 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row10_col5 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col6 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row10_col6 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col7 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row10_col7 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col8 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row10_col8 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col10 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row10_col10 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col10 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row11_col10 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col10 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row12_col10 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col5 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row13_col5 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col10 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row14_col10 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col5 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row15_col5 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col6 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row15_col6 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col7 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row15_col7 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col8 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row15_col8 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col9 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row15_col9 {
             
                 background-color:  red;
             
             }
         
-            #T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col10 {
+            #T_5510981e_26da_11e6_bf2c_408d5c527113row15_col10 {
             
                 background-color:  red;
             
@@ -6029,7 +6033,7 @@ TERERCRDaoyJiIiIZEiNMREREZEM/X8JIgkPmC9CnwAAAABJRU5ErkJggg==
         
         </style>
 
-        <table id="T_cc243fc8_24c8_11e6_9730_408d5c527113" None>
+        <table id="T_5510981e_26da_11e6_bf2c_408d5c527113" None>
         
 
         <thead>
@@ -6081,976 +6085,976 @@ TERERCRDaoyJiIiIZEiNMREREZEM/X8JIgkPmC9CnwAAAABJRU5ErkJggg==
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row0">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row0">
                     27
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col0" class="data row0 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col0" class="data row0 col0">
                     autumn
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col1" class="data row0 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col1" class="data row0 col1">
                     small
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col2" class="data row0 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col2" class="data row0 col2">
                     high
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col3" class="data row0 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col3" class="data row0 col3">
                     6.8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col4" class="data row0 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col4" class="data row0 col4">
                     11.1
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col5" class="data row0 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col5" class="data row0 col5">
                     9
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col6" class="data row0 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col6" class="data row0 col6">
                     0.63
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col7" class="data row0 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col7" class="data row0 col7">
                     20
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col8" class="data row0 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col8" class="data row0 col8">
                     4
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col9" class="data row0 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col9" class="data row0 col9">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col10" class="data row0 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col10" class="data row0 col10">
                     2.7
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col11" class="data row0 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col11" class="data row0 col11">
                     30.3
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col12" class="data row0 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col12" class="data row0 col12">
                     1.9
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col13" class="data row0 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col13" class="data row0 col13">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col14" class="data row0 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col14" class="data row0 col14">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col15" class="data row0 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col15" class="data row0 col15">
                     2.1
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col16" class="data row0 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col16" class="data row0 col16">
                     1.4
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row0_col17" class="data row0 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row0_col17" class="data row0 col17">
                     2.1
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row1">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row1">
                     37
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col0" class="data row1 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col0" class="data row1 col0">
                     spring
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col1" class="data row1 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col1" class="data row1 col1">
                     small
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col2" class="data row1 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col2" class="data row1 col2">
                     high
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col3" class="data row1 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col3" class="data row1 col3">
                     8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col4" class="data row1 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col4" class="data row1 col4">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col5" class="data row1 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col5" class="data row1 col5">
                     1.45
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col6" class="data row1 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col6" class="data row1 col6">
                     0.81
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col7" class="data row1 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col7" class="data row1 col7">
                     10
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col8" class="data row1 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col8" class="data row1 col8">
                     2.5
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col9" class="data row1 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col9" class="data row1 col9">
                     3
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col10" class="data row1 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col10" class="data row1 col10">
                     0.3
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col11" class="data row1 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col11" class="data row1 col11">
                     75.8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col12" class="data row1 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col12" class="data row1 col12">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col13" class="data row1 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col13" class="data row1 col13">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col14" class="data row1 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col14" class="data row1 col14">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col15" class="data row1 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col15" class="data row1 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col16" class="data row1 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col16" class="data row1 col16">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row1_col17" class="data row1 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row1_col17" class="data row1 col17">
                     0
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row2">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row2">
                     47
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col0" class="data row2 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col0" class="data row2 col0">
                     winter
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col1" class="data row2 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col1" class="data row2 col1">
                     small
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col2" class="data row2 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col2" class="data row2 col2">
                     low
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col3" class="data row2 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col3" class="data row2 col3">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col4" class="data row2 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col4" class="data row2 col4">
                     12.6
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col5" class="data row2 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col5" class="data row2 col5">
                     9
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col6" class="data row2 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col6" class="data row2 col6">
                     0.23
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col7" class="data row2 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col7" class="data row2 col7">
                     10
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col8" class="data row2 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col8" class="data row2 col8">
                     5
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col9" class="data row2 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col9" class="data row2 col9">
                     6
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col10" class="data row2 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col10" class="data row2 col10">
                     1.1
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col11" class="data row2 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col11" class="data row2 col11">
                     35.5
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col12" class="data row2 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col12" class="data row2 col12">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col13" class="data row2 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col13" class="data row2 col13">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col14" class="data row2 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col14" class="data row2 col14">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col15" class="data row2 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col15" class="data row2 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col16" class="data row2 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col16" class="data row2 col16">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row2_col17" class="data row2 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row2_col17" class="data row2 col17">
                     0
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row3">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row3">
                     54
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col0" class="data row3 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col0" class="data row3 col0">
                     winter
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col1" class="data row3 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col1" class="data row3 col1">
                     small
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col2" class="data row3 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col2" class="data row3 col2">
                     high
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col3" class="data row3 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col3" class="data row3 col3">
                     6.6
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col4" class="data row3 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col4" class="data row3 col4">
                     10.8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col5" class="data row3 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col5" class="data row3 col5">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col6" class="data row3 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col6" class="data row3 col6">
                     3.245
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col7" class="data row3 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col7" class="data row3 col7">
                     10
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col8" class="data row3 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col8" class="data row3 col8">
                     1
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col9" class="data row3 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col9" class="data row3 col9">
                     6.5
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col10" class="data row3 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col10" class="data row3 col10">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col11" class="data row3 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col11" class="data row3 col11">
                     24.3
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col12" class="data row3 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col12" class="data row3 col12">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col13" class="data row3 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col13" class="data row3 col13">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col14" class="data row3 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col14" class="data row3 col14">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col15" class="data row3 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col15" class="data row3 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col16" class="data row3 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col16" class="data row3 col16">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row3_col17" class="data row3 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row3_col17" class="data row3 col17">
                     0
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row4">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row4">
                     55
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col0" class="data row4 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col0" class="data row4 col0">
                     spring
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col1" class="data row4 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col1" class="data row4 col1">
                     small
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col2" class="data row4 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col2" class="data row4 col2">
                     medium
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col3" class="data row4 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col3" class="data row4 col3">
                     5.6
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col4" class="data row4 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col4" class="data row4 col4">
                     11.8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col5" class="data row4 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col5" class="data row4 col5">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col6" class="data row4 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col6" class="data row4 col6">
                     2.22
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col7" class="data row4 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col7" class="data row4 col7">
                     5
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col8" class="data row4 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col8" class="data row4 col8">
                     1
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col9" class="data row4 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col9" class="data row4 col9">
                     1
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col10" class="data row4 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col10" class="data row4 col10">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col11" class="data row4 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col11" class="data row4 col11">
                     82.7
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col12" class="data row4 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col12" class="data row4 col12">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col13" class="data row4 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col13" class="data row4 col13">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col14" class="data row4 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col14" class="data row4 col14">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col15" class="data row4 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col15" class="data row4 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col16" class="data row4 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col16" class="data row4 col16">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row4_col17" class="data row4 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row4_col17" class="data row4 col17">
                     0
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row5">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row5">
                     56
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col0" class="data row5 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col0" class="data row5 col0">
                     autumn
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col1" class="data row5 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col1" class="data row5 col1">
                     small
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col2" class="data row5 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col2" class="data row5 col2">
                     medium
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col3" class="data row5 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col3" class="data row5 col3">
                     5.7
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col4" class="data row5 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col4" class="data row5 col4">
                     10.8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col5" class="data row5 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col5" class="data row5 col5">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col6" class="data row5 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col6" class="data row5 col6">
                     2.55
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col7" class="data row5 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col7" class="data row5 col7">
                     10
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col8" class="data row5 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col8" class="data row5 col8">
                     1
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col9" class="data row5 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col9" class="data row5 col9">
                     4
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col10" class="data row5 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col10" class="data row5 col10">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col11" class="data row5 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col11" class="data row5 col11">
                     16.8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col12" class="data row5 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col12" class="data row5 col12">
                     4.6
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col13" class="data row5 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col13" class="data row5 col13">
                     3.9
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col14" class="data row5 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col14" class="data row5 col14">
                     11.5
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col15" class="data row5 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col15" class="data row5 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col16" class="data row5 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col16" class="data row5 col16">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row5_col17" class="data row5 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row5_col17" class="data row5 col17">
                     0
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row6">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row6">
                     57
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col0" class="data row6 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col0" class="data row6 col0">
                     spring
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col1" class="data row6 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col1" class="data row6 col1">
                     small
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col2" class="data row6 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col2" class="data row6 col2">
                     high
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col3" class="data row6 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col3" class="data row6 col3">
                     6.6
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col4" class="data row6 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col4" class="data row6 col4">
                     9.5
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col5" class="data row6 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col5" class="data row6 col5">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col6" class="data row6 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col6" class="data row6 col6">
                     1.32
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col7" class="data row6 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col7" class="data row6 col7">
                     20
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col8" class="data row6 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col8" class="data row6 col8">
                     1
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col9" class="data row6 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col9" class="data row6 col9">
                     6
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col10" class="data row6 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col10" class="data row6 col10">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col11" class="data row6 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col11" class="data row6 col11">
                     46.8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col12" class="data row6 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col12" class="data row6 col12">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col13" class="data row6 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col13" class="data row6 col13">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col14" class="data row6 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col14" class="data row6 col14">
                     28.8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col15" class="data row6 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col15" class="data row6 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col16" class="data row6 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col16" class="data row6 col16">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row6_col17" class="data row6 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row6_col17" class="data row6 col17">
                     0
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row7">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row7">
                     58
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col0" class="data row7 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col0" class="data row7 col0">
                     summer
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col1" class="data row7 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col1" class="data row7 col1">
                     small
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col2" class="data row7 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col2" class="data row7 col2">
                     high
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col3" class="data row7 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col3" class="data row7 col3">
                     6.6
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col4" class="data row7 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col4" class="data row7 col4">
                     10.8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col5" class="data row7 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col5" class="data row7 col5">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col6" class="data row7 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col6" class="data row7 col6">
                     2.64
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col7" class="data row7 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col7" class="data row7 col7">
                     10
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col8" class="data row7 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col8" class="data row7 col8">
                     2
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col9" class="data row7 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col9" class="data row7 col9">
                     11
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col10" class="data row7 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col10" class="data row7 col10">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col11" class="data row7 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col11" class="data row7 col11">
                     46.9
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col12" class="data row7 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col12" class="data row7 col12">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col13" class="data row7 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col13" class="data row7 col13">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col14" class="data row7 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col14" class="data row7 col14">
                     13.4
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col15" class="data row7 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col15" class="data row7 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col16" class="data row7 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col16" class="data row7 col16">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row7_col17" class="data row7 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row7_col17" class="data row7 col17">
                     0
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row8">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row8">
                     59
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col0" class="data row8 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col0" class="data row8 col0">
                     autumn
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col1" class="data row8 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col1" class="data row8 col1">
                     small
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col2" class="data row8 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col2" class="data row8 col2">
                     medium
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col3" class="data row8 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col3" class="data row8 col3">
                     6.6
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col4" class="data row8 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col4" class="data row8 col4">
                     11.3
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col5" class="data row8 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col5" class="data row8 col5">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col6" class="data row8 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col6" class="data row8 col6">
                     4.17
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col7" class="data row8 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col7" class="data row8 col7">
                     10
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col8" class="data row8 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col8" class="data row8 col8">
                     1
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col9" class="data row8 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col9" class="data row8 col9">
                     6
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col10" class="data row8 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col10" class="data row8 col10">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col11" class="data row8 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col11" class="data row8 col11">
                     47.1
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col12" class="data row8 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col12" class="data row8 col12">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col13" class="data row8 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col13" class="data row8 col13">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col14" class="data row8 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col14" class="data row8 col14">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col15" class="data row8 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col15" class="data row8 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col16" class="data row8 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col16" class="data row8 col16">
                     1.2
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row8_col17" class="data row8 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row8_col17" class="data row8 col17">
                     0
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row9">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row9">
                     60
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col0" class="data row9 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col0" class="data row9 col0">
                     spring
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col1" class="data row9 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col1" class="data row9 col1">
                     small
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col2" class="data row9 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col2" class="data row9 col2">
                     medium
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col3" class="data row9 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col3" class="data row9 col3">
                     6.5
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col4" class="data row9 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col4" class="data row9 col4">
                     10.4
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col5" class="data row9 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col5" class="data row9 col5">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col6" class="data row9 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col6" class="data row9 col6">
                     5.97
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col7" class="data row9 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col7" class="data row9 col7">
                     10
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col8" class="data row9 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col8" class="data row9 col8">
                     2
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col9" class="data row9 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col9" class="data row9 col9">
                     14
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col10" class="data row9 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col10" class="data row9 col10">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col11" class="data row9 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col11" class="data row9 col11">
                     66.9
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col12" class="data row9 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col12" class="data row9 col12">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col13" class="data row9 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col13" class="data row9 col13">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col14" class="data row9 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col14" class="data row9 col14">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col15" class="data row9 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col15" class="data row9 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col16" class="data row9 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col16" class="data row9 col16">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row9_col17" class="data row9 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row9_col17" class="data row9 col17">
                     0
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row10">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row10">
                     61
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col0" class="data row10 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col0" class="data row10 col0">
                     summer
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col1" class="data row10 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col1" class="data row10 col1">
                     small
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col2" class="data row10 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col2" class="data row10 col2">
                     medium
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col3" class="data row10 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col3" class="data row10 col3">
                     6.4
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col4" class="data row10 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col4" class="data row10 col4">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col5" class="data row10 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col5" class="data row10 col5">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col6" class="data row10 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col6" class="data row10 col6">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col7" class="data row10 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col7" class="data row10 col7">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col8" class="data row10 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col8" class="data row10 col8">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col9" class="data row10 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col9" class="data row10 col9">
                     14
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col10" class="data row10 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col10" class="data row10 col10">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col11" class="data row10 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col11" class="data row10 col11">
                     19.4
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col12" class="data row10 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col12" class="data row10 col12">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col13" class="data row10 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col13" class="data row10 col13">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col14" class="data row10 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col14" class="data row10 col14">
                     2
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col15" class="data row10 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col15" class="data row10 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col16" class="data row10 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col16" class="data row10 col16">
                     3.9
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row10_col17" class="data row10 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row10_col17" class="data row10 col17">
                     1.7
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row11">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row11">
                     62
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col0" class="data row11 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col0" class="data row11 col0">
                     autumn
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col1" class="data row11 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col1" class="data row11 col1">
                     small
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col2" class="data row11 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col2" class="data row11 col2">
                     high
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col3" class="data row11 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col3" class="data row11 col3">
                     7.83
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col4" class="data row11 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col4" class="data row11 col4">
                     11.7
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col5" class="data row11 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col5" class="data row11 col5">
                     4.083
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col6" class="data row11 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col6" class="data row11 col6">
                     1.328
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col7" class="data row11 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col7" class="data row11 col7">
                     18
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col8" class="data row11 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col8" class="data row11 col8">
                     3.333
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col9" class="data row11 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col9" class="data row11 col9">
                     6.667
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col10" class="data row11 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col10" class="data row11 col10">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col11" class="data row11 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col11" class="data row11 col11">
                     14.4
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col12" class="data row11 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col12" class="data row11 col12">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col13" class="data row11 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col13" class="data row11 col13">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col14" class="data row11 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col14" class="data row11 col14">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col15" class="data row11 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col15" class="data row11 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col16" class="data row11 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col16" class="data row11 col16">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row11_col17" class="data row11 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row11_col17" class="data row11 col17">
                     0
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row12">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row12">
                     115
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col0" class="data row12 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col0" class="data row12 col0">
                     winter
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col1" class="data row12 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col1" class="data row12 col1">
                     medium
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col2" class="data row12 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col2" class="data row12 col2">
                     high
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col3" class="data row12 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col3" class="data row12 col3">
                     9.7
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col4" class="data row12 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col4" class="data row12 col4">
                     10.8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col5" class="data row12 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col5" class="data row12 col5">
                     0.222
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col6" class="data row12 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col6" class="data row12 col6">
                     0.406
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col7" class="data row12 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col7" class="data row12 col7">
                     10
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col8" class="data row12 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col8" class="data row12 col8">
                     22.444
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col9" class="data row12 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col9" class="data row12 col9">
                     10.111
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col10" class="data row12 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col10" class="data row12 col10">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col11" class="data row12 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col11" class="data row12 col11">
                     41
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col12" class="data row12 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col12" class="data row12 col12">
                     1.5
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col13" class="data row12 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col13" class="data row12 col13">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col14" class="data row12 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col14" class="data row12 col14">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col15" class="data row12 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col15" class="data row12 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col16" class="data row12 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col16" class="data row12 col16">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row12_col17" class="data row12 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row12_col17" class="data row12 col17">
                     0
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row13">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row13">
                     160
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col0" class="data row13 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col0" class="data row13 col0">
                     spring
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col1" class="data row13 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col1" class="data row13 col1">
                     large
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col2" class="data row13 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col2" class="data row13 col2">
                     low
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col3" class="data row13 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col3" class="data row13 col3">
                     9
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col4" class="data row13 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col4" class="data row13 col4">
                     5.8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col5" class="data row13 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col5" class="data row13 col5">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col6" class="data row13 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col6" class="data row13 col6">
                     0.9
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col7" class="data row13 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col7" class="data row13 col7">
                     142
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col8" class="data row13 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col8" class="data row13 col8">
                     102
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col9" class="data row13 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col9" class="data row13 col9">
                     186
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col10" class="data row13 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col10" class="data row13 col10">
                     68.05
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col11" class="data row13 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col11" class="data row13 col11">
                     1.7
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col12" class="data row13 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col12" class="data row13 col12">
                     20.6
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col13" class="data row13 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col13" class="data row13 col13">
                     1.5
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col14" class="data row13 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col14" class="data row13 col14">
                     2.2
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col15" class="data row13 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col15" class="data row13 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col16" class="data row13 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col16" class="data row13 col16">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row13_col17" class="data row13 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row13_col17" class="data row13 col17">
                     0
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row14">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row14">
                     183
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col0" class="data row14 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col0" class="data row14 col0">
                     winter
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col1" class="data row14 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col1" class="data row14 col1">
                     large
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col2" class="data row14 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col2" class="data row14 col2">
                     high
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col3" class="data row14 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col3" class="data row14 col3">
                     8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col4" class="data row14 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col4" class="data row14 col4">
                     10.9
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col5" class="data row14 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col5" class="data row14 col5">
                     9.055
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col6" class="data row14 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col6" class="data row14 col6">
                     0.825
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col7" class="data row14 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col7" class="data row14 col7">
                     40
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col8" class="data row14 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col8" class="data row14 col8">
                     21.083
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col9" class="data row14 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col9" class="data row14 col9">
                     56.091
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col10" class="data row14 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col10" class="data row14 col10">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col11" class="data row14 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col11" class="data row14 col11">
                     16.8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col12" class="data row14 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col12" class="data row14 col12">
                     19.6
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col13" class="data row14 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col13" class="data row14 col13">
                     4
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col14" class="data row14 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col14" class="data row14 col14">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col15" class="data row14 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col15" class="data row14 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col16" class="data row14 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col16" class="data row14 col16">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row14_col17" class="data row14 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row14_col17" class="data row14 col17">
                     0
                 
             </tr>
             
             <tr>
                 
-                <th id="T_cc243fc8_24c8_11e6_9730_408d5c527113" class="row_heading level17 row15">
+                <th id="T_5510981e_26da_11e6_bf2c_408d5c527113" class="row_heading level17 row15">
                     198
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col0" class="data row15 col0">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col0" class="data row15 col0">
                     winter
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col1" class="data row15 col1">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col1" class="data row15 col1">
                     large
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col2" class="data row15 col2">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col2" class="data row15 col2">
                     medium
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col3" class="data row15 col3">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col3" class="data row15 col3">
                     8
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col4" class="data row15 col4">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col4" class="data row15 col4">
                     7.6
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col5" class="data row15 col5">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col5" class="data row15 col5">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col6" class="data row15 col6">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col6" class="data row15 col6">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col7" class="data row15 col7">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col7" class="data row15 col7">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col8" class="data row15 col8">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col8" class="data row15 col8">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col9" class="data row15 col9">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col9" class="data row15 col9">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col10" class="data row15 col10">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col10" class="data row15 col10">
                     nan
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col11" class="data row15 col11">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col11" class="data row15 col11">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col12" class="data row15 col12">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col12" class="data row15 col12">
                     12.5
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col13" class="data row15 col13">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col13" class="data row15 col13">
                     3.7
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col14" class="data row15 col14">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col14" class="data row15 col14">
                     1
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col15" class="data row15 col15">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col15" class="data row15 col15">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col16" class="data row15 col16">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col16" class="data row15 col16">
                     0
                 
-                <td id="T_cc243fc8_24c8_11e6_9730_408d5c527113row15_col17" class="data row15 col17">
+                <td id="T_5510981e_26da_11e6_bf2c_408d5c527113row15_col17" class="data row15 col17">
                     4.9
                 
             </tr>
@@ -7080,7 +7084,7 @@ TERERCRDaoyJiIiIZEiNMREREZEM/X8JIgkPmC9CnwAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 将缺失值对应的数据整条剔除，生成新数据集</span>
@@ -7109,6 +7113,10 @@ TERERCRDaoyJiIiIZEiNMREREZEM/X8JIgkPmC9CnwAAAABJRU5ErkJggg==
     <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">data_filtrated</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">hspace</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># 保存图像和处理后数据</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./image/missing_data_delete.jpg&#39;</span><span class="p">)</span>
+<span class="n">data_filtrated</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;./data_output/missing_data_delete.csv&#39;</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -8770,7 +8778,7 @@ SZIkSZoYB6ckSZIkSZI0MQ5OSZIkSZIkaWIcnJIkSZIkSdLEODglSZIkSZKkiXFwSpIkSZIkSRPj
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 建立原始数据的拷贝</span>
@@ -8805,6 +8813,10 @@ SZIkSZoYB6ckSZIkSZI0MQ5OSZIkSZIkaWIcnJIkSZIkSdLEODglSZIkSZKkiXFwSpIkSZIkSRPj
     <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">data_filtrated</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">hspace</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># 保存图像和处理后数据</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./image/missing_data_most.jpg&#39;</span><span class="p">)</span>
+<span class="n">data_filtrated</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;./data_output/missing_data_most.csv&#39;</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -10303,7 +10315,7 @@ EREREWmb/x9qIei3gNfr3gAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 建立原始数据的拷贝</span>
@@ -10335,6 +10347,10 @@ EREREWmb/x9qIei3gNfr3gAAAABJRU5ErkJggg==
     <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">data_filtrated</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">hspace</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># 保存图像和处理后数据</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./image/missing_data_corelation.jpg&#39;</span><span class="p">)</span>
+<span class="n">data_filtrated</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;./data_output/missing_data_corelation.csv&#39;</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11839,7 +11855,7 @@ Aca88aUYEwu2AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 建立原始数据的拷贝，用于正则化处理</span>
@@ -11880,19 +11896,8 @@ Aca88aUYEwu2AAAAAElFTkSuQmCC
                 <span class="n">data_filtrated</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_origin</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">data_filtrated</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_origin</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">best_friend</span><span class="p">][</span><span class="n">item</span><span class="p">]</span>
-</pre></div>
 
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[102]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 绘制可视化图</span>
+<span class="c1"># 绘制可视化图</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
 
 <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
@@ -11915,6 +11920,10 @@ Aca88aUYEwu2AAAAAElFTkSuQmCC
     <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">data_filtrated</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">hspace</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># 保存图像和处理后数据</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./image/missing_data_similarity.jpg&#39;</span><span class="p">)</span>
+<span class="n">data_filtrated</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;./data_output/missing_data_similarity.csv&#39;</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13397,29 +13406,6 @@ iLSNBqdERERERERERKRtNDglIiIiIiIiIiJt838AQOQYL8JQWY0AAAAASUVORK5CYII=
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Step 5.保存预处理后的数据集</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data_filtrated</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;./Analysis_filted.csv&#39;</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
-</pre></div>
-
-</div>
 </div>
 </div>
 
