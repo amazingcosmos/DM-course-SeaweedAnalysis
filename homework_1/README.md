@@ -6,10 +6,10 @@
 
 ### 文件说明：
 
-- Analysis.txt-原始数据文件
-- Analysis.csv-预处理数据文件，用于pandas读取数据
-- Analysis_filted.csv-进行缺失值处理用的数据文件，用第四种方法，根据数据对象之间的相似性来填补缺失值
-- Seaweed_analyse.html-分析报告（html版，下载查看）
-- Seaweed_analyse.ipynb-分析报告（ipynb版，可以直接在github页面打开预览）
-- Seaweed_analyse_2120151008_liyi.py-分析程序
-- image/ 结果图片文件夹
+- data_origin:原始数据
+- data_output:处理缺失值后的数据文件
+- image:可视化结果图片
+- Seaweed_analyse.ipynb:分析报告（ipynb版，推荐！可以直接在github页面打开预览）
+- Seaweed_analyse.py:分析程序
+- 海藻数据分析报告-李懿-2120151008.html:分析报告（html版）
+- 海藻数据分析报告-李懿-2120151008.pdf:分析报告（pdf版）
